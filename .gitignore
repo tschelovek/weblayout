@@ -132,3 +132,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,webstorm
+/02_html/materials/
+/02_html/02.rar
+/02_html/02/
+/01_intro/.idea/
+/01_intro/screenshotIDE.JPG
+/.idea/
