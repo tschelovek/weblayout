@@ -1,0 +1,341 @@
+@font-face {
+  font-family: 'Graphik LCG';
+  src: url('../fonts/GraphikLCG-Medium.woff2') format('woff2'),
+  url('../fonts/GraphikLCG-Medium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+  url('../fonts/Gilroy-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+  url('../fonts/Gilroy-Medium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ПЕРВАЯ СТРАНИЦА */
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222020;
+  color: #ffffff;
+}
+
+.main-content__title {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-family: Graphik LCG, sans-serif;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 10px;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.button:hover {
+  -webkit-box-shadow: 5px 5px #ffffff;
+  -moz-box-shadow: 5px 5px #ffffff;
+  box-shadow: 5px 5px #ffffff;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.button_blue {
+  background-color: #2f1ce4;
+  border: 3px solid #2f1ce4;
+}
+
+.button_black {
+  background: rgba(0,0,0,0);
+  border: 3px solid #ffffff;
+}
+
+/* ВТОРАЯ СТРАНИЦА */
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: 1170px;
+}
+
+.blue-font {
+  color: #2f1ce4;
+}
+
+.button_back {
+  padding: 10px 10px 10px 60px;
+  background: url('../img/return.png') no-repeat 10%;
+  background-size: contain;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.button_back:hover {
+  -webkit-box-shadow: 5px 5px #2f1ce4;
+  -moz-box-shadow: 5px 5px #2f1ce4;
+  box-shadow: 5px 5px #2f1ce4;
+  border: 1px solid lightgrey;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  background-color: #ffffff;
+}
+
+.title_big {
+  margin-top: 100px;
+  padding-left: 100px;
+  font-size: 48px;
+  color: #222020;
+}
+
+.title_reg {
+  margin: 100px 0 25px;
+  padding-left: 180px;
+  font-size: 36px;
+}
+
+.list {
+  padding-left: 200px;
+  font-size: 18px;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list_no-marker {
+  list-style: none;
+}
+
+.list_blue-dotted li:before {
+  margin-right: 5px;
+  color: #2f1ce4;
+  content: '●';
+}
+
+.list_blue-dotted li:last-child:before {
+  content: none;
+}
+
+.list li:last-child {
+  margin: 0;
+}
+
+.nav__link {
+  padding-right: 5px;
+  border-bottom: dotted #2f1ce4;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.nav__link:hover {
+  -webkit-box-shadow: 5px 5px #2f1ce4;
+  -moz-box-shadow: 5px 5px #2f1ce4;
+  box-shadow: 5px 5px #2f1ce4;
+  border: 1px solid lightgrey;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.text {
+  padding-left: 180px;
+  margin-bottom: 20px;
+}
+
+.text_crossed {
+  text-decoration: line-through;
+}
+
+.img-container {
+  display: inline-block;
+  margin: 50px 0 50px;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.img-container img {
+  max-width: 400px;
+}
+
+.table, .table th, .table td {
+  border: 1px solid #a0a0a0;
+  padding: 10px;
+}
+
+.table {
+  margin-top: 100px;
+  width: 100%;
+  border-collapse: collapse
+}
+
+.table caption {
+  margin-bottom: 30px;
+}
+
+/* ТРЕТЬЯ СТРАНИЦА */
+
+.blue-wave {
+  padding-bottom: 500px;
+  background: bottom no-repeat url("../img/4hw/blue-wave.svg");
+}
+
+.logo {
+  margin: 0 0 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.mini-header-container {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.module-container {
+  padding: 0 45px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.module-item {
+  position: relative;
+  display: inline-block;
+  width: 45%;
+  margin: 80px 5% 0 0 ;
+  -webkit-box-shadow: 0 0 5px #a0a0a0;
+  -moz-box-shadow: 0 0 5px #a0a0a0;
+  box-shadow: 0 0 15px #a0a0a0;
+  vertical-align: middle;
+}
+
+.module-item_01 {
+  background: url("../img/4hw/1.jpg") top no-repeat;
+  background-size: contain;
+}
+
+.module-item_02 {
+  background: url("../img/4hw/2.jpg") top no-repeat;
+  background-size: contain;
+}
+
+.module-item_03 {
+  background: url("../img/4hw/3.jpg") top no-repeat;
+  background-size: contain;
+}
+
+.module-item_04 {
+  background: url("../img/4hw/4.jpg") top no-repeat;
+  background-size: contain;
+}
+
+.module-item_right {
+  margin: 80px 0 0 5%;
+}
+
+.module-item__body {
+  padding: 180px 0 0 55px;
+  min-height: 500px;
+}
+
+.module-item__body h2 {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.module-item__list {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.number {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 48px;
+  color: #eaeaea;
+}
+
+.button-container_center {
+  text-align: center;
+}
+
+.button_white {
+  font-size: 1rem;
+  color: #2f1ce4;
+  border: 3px solid #2f1ce4;
+  margin-top: 80px;
+  padding: 20px 60px;
+}
+
+.button_white:hover {
+  -webkit-box-shadow: 5px 5px #000000;
+  -moz-box-shadow: 5px 5px #000000;
+  box-shadow: 5px 5px #000000;
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <image id="twitter" class="cls-1" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACDUlEQVRIib2Wy2pUQRCGv/8wXoh4g0RRhGBwJ94QLwyuRMEHiBshG0H0lcSVKLhwpSD4BBOJILhwIUjiiBJDxGiUBFFTUqEOaY7dx4wS/83MdM/5qubv6qoRLTKzChgFxoARYCi2loB5YBroS1opMbIBAnwa6AI72pIAFoEeMJUL9FsAMxsGLgN7/wBuag64L+lDMYCZHQAmgC0Dwmt9A+5IelsvVI3M/wVOPDsRrFWJNc+vhy0raeCCZoFJ4BMwHGflr27PZmAZuOlnUgc4C1yKhx8AR4GDBfgr4J6kn8mv3xQBXFcB//xY0pMqsu8mgDfAXeBZIcCjFL5qg/Rd0mw48iKWu86u6zwtxa0OkPQQuB0Bay1KWmix7ghwPN47c7QTlyjVSeBdZDYDzJjZ7rBsWwvcdarxeawTNzTVezPbKelzYoFn3Za5n4NXUKexPFIl17/WQgofQHsya0O5cjwfVTGoDuUWq2hcqfYB427TeslRiccyW0tVdMWmfgxo0wlgV2Z9voqW29RhMzsXmbUqKuxiYXvaAf1ouU1dAG4EoAT3sr3idyez7cx+x/uFmfWiVbgtX4EvwGvguaTlAtw773jBGlfP2XXdToWP3k9eAk8l5c7GwV4EZ+JQSxNxLphrX4gWey1p1x+ja9ZVth3Yv44J5zPhVj14Nnzg/N+RmQTZuKGfCfT3f1uAX+gewaK31LpWAAAAAElFTkSuQmCC"/>
+</svg>
