@@ -73,6 +73,10 @@ h2 {
   color: #999999;
 }
 
+.test {
+  color: #999999;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -198,8 +202,9 @@ ul {
     width: 100%;
     margin-bottom: 24px;
     font-weight: 500;
-    line-height: 4;
+    height: 65px;
 }
+
 
 .booking-search {
     align-items: center;
@@ -215,6 +220,7 @@ ul {
     background-color: #cc9933;
     cursor: pointer;
     border: none;
+    outline: none;
 }
 
 .availability {
@@ -503,9 +509,9 @@ ul {
   color: #333333;
 }
 
-.contacts__item-name {
-  display: inline-table;
-  width: 150px;
+.contacts__item-title {
+  margin: 0;
+  width: 40%;
   font-size: 22px;
   font-weight: 600;
   color: #666666;
@@ -513,6 +519,10 @@ ul {
 
 .contacts__email-text {
   color: #999999;
+}
+
+.contacts__item-body {
+  width: 60%;
 }
 
 .btn_bigger {
@@ -617,7 +627,7 @@ ul {
   background-image: url("../img/icons/social.svg");
 }
 
-.footer-medialinks_gplus {
+.footer-medialinks_g-plus {
   background-image: url("../img/icons/google-plus-social-logotype.svg");
 }
 
