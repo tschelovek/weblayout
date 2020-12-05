@@ -22,7 +22,10 @@
           <li class="nav-item"><a href="#">Отзывы</a></li>
           <li class="nav-item"><a href="#">Контакты</a></li>
         </ul>
-        <button class="header-search"></button>
+        <form method="post">
+          <input type="search" class="header__search-input">
+          <button type="submit" class="header__search-button"></button>
+        </form>
       </nav>
     </div>
   </div>
@@ -34,7 +37,7 @@
     <div class="container">
       <div class="hero__body">
         <div class="hero__text">
-          <h1 class="hero__h1">Проектные решения <span>любой сложности</span></h1>
+          <h1 class="hero__h1">Проектные решения любой сложности</h1>
           <p class="hero__p">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
             уделом
             проектантов</p>
@@ -62,7 +65,7 @@
         экспериментов.
       </p>
       <div class="about__body">
-        <article class="about__detail">
+        <div class="about__detail">
           <div class="about__detail-text">
             <p>
               Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и
@@ -70,7 +73,7 @@
             </p>
             <a href="#" class="about__button">Подробнее</a>
           </div>
-        </article>
+        </div>
         <ul class="about__list">
           <li class="about__item">
             <h3 class="about__mini-title">Консультация с широким активом</h3>
@@ -100,7 +103,7 @@
         <li class="how__item">4 шаг</li>
       </ul>
       <div class="how__body">
-        <div class="how__info">
+        <article class="how__info">
           <h3 class="how__info-title">Проводим консультацию</h3>
           <p class="how__info-text">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
             В рамках спецификации
@@ -116,7 +119,7 @@
             <a href="#" class="how__button_orange button_orange">Подробнее</a>
             <a href="#" class="how__button_white">Договор</a>
           </div>
-        </div>
+        </article>
         <div class="how__image-block"></div>
       </div>
     </div>
@@ -173,16 +176,16 @@
         </ul>
       </div>
       <div class="footer__form-container">
-        <h4 class="footer__title">Оставить заявку</h4>
-        <form action="" method="post" class="footer__form">
+        <h2 class="footer__title">Оставить заявку</h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form">
           <input class="footer__input" type="text" placeholder="Фамилия, имя, отчество*">
           <input class="footer__input" type="email" placeholder="E-mail*">
-          <textarea class="footer__textarea" name="message_footer" id="" cols="30" rows="7"
+          <textarea class="footer__textarea" name="message_footer" id="footer_textarea" cols="30" rows="7"
                     placeholder="Сообщение"></textarea>
           <div class="form-bottom">
             <button type="submit" class="submit_footer button_orange">Отправить данные</button>
             <div class="checkbox-container">
-            <input type="checkbox" class="footer__checkbox" id="agreement" checked="true">
+            <input type="checkbox" class="footer__checkbox" id="agreement" checked>
             <label for="agreement" class="footer__checkbox-label">Согласен на обработку данных</label>
             </div>
           </div>

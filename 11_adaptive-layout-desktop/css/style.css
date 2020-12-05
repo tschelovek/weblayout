@@ -1,44 +1,12 @@
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-regular.woff2') format('woff2'),
-  url('../fonts/montserrat-regular.woff') format('woff');
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-semibold.woff2') format('woff2'),
-  url('../fonts/montserrat-semibold.woff') format('woff');
-  font-display: swap;
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-bold.woff2') format('woff2'),
-  url('../fonts/montserrat-bold.woff') format('woff');
-  font-display: swap;
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-extrabold.woff2') format('woff2'),
-  url('../fonts/montserrat-extrabold.woff') format('woff');
-  font-display: swap;
-  font-weight: 800;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
 
 /* Общие классы для разных элементов */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -47,10 +15,6 @@ a {
 
 address {
   font-style: normal;
-}
-
-html {
-  font-family: 'Montserrat', sans-serif;
 }
 
 img {
@@ -64,14 +28,12 @@ h2, h3, p, ul {
 h2 {
   font-size: 47px;
   font-weight: 400;
-  letter-spacing: 3px;
   color: #333333;
 }
 
-.input {
+input {
   outline: none;
   border: none;
-  border-radius: 12px;
 }
 
 ul {
@@ -80,9 +42,9 @@ ul {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1820px;
   margin: 0 auto;
-  padding: 0 75px;
+  padding: 0 25px;
 }
 
 .button_orange {
@@ -138,10 +100,14 @@ ul {
   margin-left: 82px;
 }
 
-.header-search {
-  margin: 0 10px 0 63px;
-  min-width: 28px;
-  min-height: 23px;
+.header__search-input {
+  display: none;
+}
+
+.header__search-button {
+  margin: 0 10px 0 65px;
+  min-width: 26px;
+  min-height: 25px;
   transform: translateY(2px);
   background: url(../img/icons/Search.svg) no-repeat;
   background-size: contain;
@@ -158,11 +124,10 @@ ul {
   font-size: 18px;
   line-height: 22px;
   color: #333333;
-  letter-spacing: 1px;
 }
 
 .hero__text {
-  padding: 107px 0 90px 80px;
+  padding: 103px 0 90px 80px;
   max-width: 900px;
   color: #ffffff;
   font-size: 24px;
@@ -170,28 +135,19 @@ ul {
 }
 
 .hero__h1 {
-  margin: 0 -4px 21px;
+  margin: 0 -4px 22px;
   font-size: 71px;
   font-weight: 800;
   line-height: 85px;
   color: #ffffff;
 }
 
-.hero__h1 span {
-  letter-spacing: -1px;
-}
-
-.hero__p {
-  letter-spacing: 1px;
-}
-
 .hero__button {
   display: inline-block;
-  margin-top: 97px;
-  padding: 28px 37px 25px;
+  margin-top: 100px;
+  padding: 28px 36px 25px;
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: 1px;
   color: #ffffff;
   background: #FF9900;
 }
@@ -206,7 +162,6 @@ ul {
   font-weight: 400;
   font-size: 16px;
   line-height: 2;
-  letter-spacing: 1px;
   color: #333333;
 }
 
@@ -238,7 +193,6 @@ ul {
   font-size: 16px;
   font-weight: 700;
   line-height: 2;
-  letter-spacing: 1px;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.5);
 }
@@ -282,26 +236,24 @@ ul {
 .about__item p {
   margin-top: 5px;
   line-height: 2;
-  letter-spacing: 1px;
 }
 
 .about__mini-title {
   font-weight: 800;
   font-size: 22px;
-  letter-spacing: 1px;
 }
 
 .about__item:first-child {
-  background: url("../img/icons/about1.svg") left 62px top 46% no-repeat;
+  background: url("../img/icons/about1.svg") left 62px top 45% no-repeat;
 }
 
 .about__item:last-child {
   margin-top: 30px;
-  background: url("../img/icons/about2.svg") left 61px top 38% no-repeat;
+  background: url("../img/icons/about2.svg") left 61px top 37% no-repeat;
 }
 
 .how {
-  margin-top: 105px;
+  margin-top: 102px;
 }
 
 .how__list {
@@ -312,7 +264,6 @@ ul {
 .how__item {
   margin-right: 91px;
   font-size: 17px;
-  letter-spacing: 1px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
@@ -337,14 +288,12 @@ ul {
 
 .how__info-title {
   font-size: 24px;
-  letter-spacing: 2px;
 }
 
 .how__info-text {
   margin-top: 5px;
   max-width: 760px;
   line-height: 2;
-  letter-spacing: 1px;
 }
 
 .how__button_orange {
@@ -353,7 +302,6 @@ ul {
   padding: 21px 40px 20px;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 1px;
   color: #ffffff;
   background: #FF9900;
 }
@@ -361,11 +309,10 @@ ul {
 .how__button_white {
   display: inline-block;
   margin-left: 26px;
-  padding: 21px 39px 17px;
+  padding: 21px 36px 17px;
   border: 1px solid #333333;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 1px;
   color: #333333;
   transition: all 0.3s ease-in-out;
 }
@@ -398,7 +345,7 @@ ul {
 
 .questions__item {
   position: relative;
-  padding: 39px 0 40px;
+  padding: 35px 0 34px;
   border-top: 1px solid #cacaca;
 }
 
@@ -413,7 +360,6 @@ ul {
   font-size: 25px;
   font-weight: 700;
   line-height: 35px;
-  letter-spacing: 1px;
   color: #333333;
   transition: all 0.3s ease-in-out;
 }
@@ -473,7 +419,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   color: #cacaca;
-  letter-spacing: 1px;
 }
 
 .footer__social-media {
@@ -508,7 +453,7 @@ ul {
   margin: 12px -2px 21px;
   font-size: 51px;
   font-weight: 400;
-  letter-spacing: 1px;
+  color: #cacaca;
 }
 
 .footer__form-container {
@@ -521,7 +466,6 @@ ul {
   background: #414141;
   outline: none;
   border: none;
-  letter-spacing: 1px;
 }
 
 .footer__input::placeholder, .footer__textarea::placeholder {
@@ -549,7 +493,6 @@ ul {
   padding: 21px 0 21px;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 1px;
   border: none;
   color: #ffffff;
   background: #FF9900;
@@ -561,11 +504,34 @@ ul {
 }
 
 .footer__checkbox {
-  margin-left: 20px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.footer__checkbox-label {
-  letter-spacing: 1px;
+.footer__checkbox+label {
+  display: inline-flex;
+  margin-left: 19px;
+  align-items: center;
+  user-select: none;
+}
+
+.footer__checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #cacaca;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.footer__checkbox:checked+label::before {
+  background: url(../img/icons/check.svg) center bottom 70% no-repeat;
 }
 
 .footer__text-container {
@@ -575,19 +541,18 @@ ul {
 
 .footer__text {
   padding-left: 10px;
-  max-width: 362px;
+  max-width: 365px;
   line-height: 2em;
   padding-top: 79px;
-  letter-spacing: 1px;
 }
 
 
 @media (max-width: 1365px) {
   .nav-item:not(:first-child) {
-    margin-left: 43px;
+    margin-left: 50px;
   }
-  .header-search {
-    margin-left: 20px;
+  .header__search-button {
+    margin-left: 30px;
   }
   .about__body {
     flex-direction: column;
@@ -622,10 +587,12 @@ ul {
     display: none;
   }
   .hero__text {
-    padding: 107px 50px 90px 45px;
+    padding: 166px 90px 120px 50px;
   }
   .hero__h1 {
+    margin-bottom: 7px;
     font-size: 60px;
+    line-height: 80px;
   }
   .hero__p {
     font-size: 20px;
@@ -633,14 +600,59 @@ ul {
   .hero__body {
     background: url(../img/hero-back_L.jpg) no-repeat;
   }
-  .about, .how, .questions {
-    margin-top: 60px;
+  .hero__button {
+    margin-top: 120px;
+    padding: 30px 45px 25px;
+  }
+  .about, .questions {
+    margin-top: 66px;
+  }
+  .about__text {
+    margin: 32px 0 64px;
+    line-height: 33px;
+  }
+  .about__detail {
+    height: 673px;
+  }
+  .about__detail-text {
+    padding: 42px 57px 42px 55px;
+  }
+  .about__button {
+    margin-left: 155px;
+    padding: 20px 39px 20px;
+  }
+  .about__item {
+    padding: 70px 131px 64px 366px;;
+  }
+  .about__item:first-child {
+    background: url(../img/icons/about1.svg) left 119px top 49% no-repeat;
+  }
+  .about__item:last-child {
+    background: url(../img/icons/about2.svg) left 124px top 44% no-repeat;
+  }
+  .about__item p {
+    line-height: 36px;
+  }
+  .how {
+    margin-top: 37px;
+  }
+  .how__info-text {
+    max-width: 453px;
+    line-height: 34px;
+  }
+  .how__button_orange {
+    margin-top: 27px;
+    padding: 21px 44px 20px;
   }
   .how__image-block {
     background: url(../img/how-back_M.jpg) no-repeat;
+    background-size: cover;
   }
   .questions__link {
     font-size: 20px;
+  }
+  .footer {
+    margin-top: 70px;
   }
   .footer-body {
     justify-content: space-between;
@@ -650,3 +662,128 @@ ul {
   }
 }
 
+
+@media (max-width: 991px) {
+  .header-body {
+    max-height: 69px;
+  }
+  .logo__header img {
+    max-height: 50px;
+  }
+  .header__search-button {
+    margin: 0;
+  }
+  .hero {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  .hero__text {
+    padding: 188px 20px 120px 50px;
+  }
+  .hero__h1 {
+    line-height: 75px;
+  }
+  .hero__button {
+    margin-top: 114px;
+    padding: 30px 38px 25px;
+  }
+  .about, .how, .questions, .header-body {
+    padding: 0 25px;
+  }
+  .about {
+    margin-top: 53px;
+  }
+  .about__text {
+    margin-bottom: 55px;
+    line-height: 32px;
+  }
+  .about__detail {
+    height: 650px;
+  }
+  .about__detail-text {
+    padding: 20px 30px 24px 29px;
+  }
+  .about__button {
+    margin-left: 40px;
+    padding: 20px 35px 20px;
+  }
+  .about__list {
+    margin-top: 40px;
+  }
+  .about__item {
+    padding: 39px 35px 35px 175px;
+  }
+  .about__item p {
+    line-height: 32px;
+  }
+  .about__item:first-child {
+    background: url(../img/icons/about1.svg) left 31px top 52% no-repeat;
+    background-size: 116px;
+  }
+  .about__item:last-child {
+    background: url(../img/icons/about2.svg) left 32px top 52% no-repeat;
+    background-size: 115px;
+  }
+  .how {
+    margin-top: 13px;
+  }
+  .how__list {
+    justify-content: space-between;
+  }
+  .how__item {
+    margin: 0;
+  }
+  .how__body {
+    flex-direction: column;
+  }
+  .how__info {
+    margin-top: 40px;
+    order: 1;
+    width: 100%;
+  }
+  .how__image-block {
+    margin: 0;
+    order: 0;
+    width: 100%;
+    height: 284px;
+    background: url(../img/how-back_S.jpg) no-repeat;
+    background-size: cover;
+  }
+  .how__info-text {
+    max-width: 100%;
+    line-height: 32px;
+  }
+  .questions h2 {
+    letter-spacing: -1px;
+  }
+  .questions__list {
+    margin-top: 40px;
+  }
+  .questions__item {
+    padding: 19px 45px 16px 0;
+  }
+  .footer {
+    margin-top: 57px;
+  }
+  .footer-body {
+    padding-top: 48px;
+    justify-content: unset;
+    flex-direction: column;
+  }
+  .footer__nav-container {
+    margin: 60px 26px 20px;
+    order: 1;
+  }
+  .footer__nav-body {
+    display: none;
+  }
+  .footer__form-container {
+    margin-left: 25px;
+  }
+  .footer__social-media {
+    padding: 0;
+  }
+  .footer__nav-container li {
+    margin-top: 13px;
+  }
+}
