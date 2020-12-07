@@ -26,7 +26,7 @@ h2, h3, p, ul {
 }
 
 h2 {
-  font-size: 47px;
+  font-size: 48px;
   font-weight: 400;
   color: #333333;
 }
@@ -42,9 +42,9 @@ ul {
 }
 
 .container {
-  max-width: 1820px;
+  max-width: 1870px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 50px;
 }
 
 .button_orange {
@@ -153,7 +153,7 @@ ul {
 }
 
 .about {
-  margin-top: 107px;
+  margin-top: 105px;
 }
 
 .about__text {
@@ -258,12 +258,12 @@ ul {
 
 .how__list {
   display: flex;
-  margin: 50px 2px;
+  margin: 51px 2px;
 }
 
 .how__item {
   margin-right: 91px;
-  font-size: 17px;
+  font-size: 16px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
@@ -451,7 +451,7 @@ ul {
 
 .footer__title {
   margin: 12px -2px 21px;
-  font-size: 51px;
+  font-size: 48px;
   font-weight: 400;
   color: #cacaca;
 }
@@ -575,10 +575,14 @@ ul {
 
 @media (max-width: 1024px) {
   .header-body {
+    height: 100px;
     justify-content: space-between;
   }
   .burger {
     display: unset;
+  }
+  .logo__header img {
+    height: 50px;
   }
   .nav {
     margin: 0;
@@ -586,13 +590,16 @@ ul {
   .nav__list {
     display: none;
   }
+  .header__search-button {
+    margin: 0;
+  }
   .hero__text {
-    padding: 166px 90px 120px 50px;
+    padding: 158px 90px 114px 47px;
   }
   .hero__h1 {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     font-size: 60px;
-    line-height: 80px;
+    line-height: 74px;
   }
   .hero__p {
     font-size: 20px;
@@ -601,52 +608,63 @@ ul {
     background: url(../img/hero-back_L.jpg) no-repeat;
   }
   .hero__button {
-    margin-top: 120px;
-    padding: 30px 45px 25px;
+    margin-top: 110px;
+    padding: 27px 37px 27px;
   }
   .about, .questions {
-    margin-top: 66px;
+    margin-top: 62px;
   }
   .about__text {
-    margin: 32px 0 64px;
-    line-height: 33px;
+    margin: 27px 0 59px;
+    line-height: 32px;
   }
   .about__detail {
-    height: 673px;
+    height: 640px;
   }
   .about__detail-text {
-    padding: 42px 57px 42px 55px;
+    padding: 38px 50px 39px 45px;
   }
   .about__button {
     margin-left: 155px;
-    padding: 20px 39px 20px;
+    padding: 20px 35px 20px;
   }
   .about__item {
-    padding: 70px 131px 64px 366px;;
+    padding: 68px 138px 62px 349px;
   }
   .about__item:first-child {
-    background: url(../img/icons/about1.svg) left 119px top 49% no-repeat;
+    background: url(../img/icons/about1.svg) left 111px top 49% no-repeat;
   }
   .about__item:last-child {
-    background: url(../img/icons/about2.svg) left 124px top 44% no-repeat;
+    background: url(../img/icons/about2.svg) left 112px top 45% no-repeat;
   }
   .about__item p {
-    line-height: 36px;
+    line-height: 33px;
   }
   .how {
-    margin-top: 37px;
+    margin-top: 14px;
   }
   .how__info-text {
-    max-width: 453px;
-    line-height: 34px;
+    max-width: 437px;
+    line-height: 32px;
   }
   .how__button_orange {
-    margin-top: 27px;
-    padding: 21px 44px 20px;
+    margin-top: 28px;
+    padding: 21px 38px 20px;
+  }
+  .how__button_white {
+    margin-left: 26px;
+    padding: 21px 37px 19px;
   }
   .how__image-block {
+    margin-left: 47px;
     background: url(../img/how-back_M.jpg) no-repeat;
     background-size: cover;
+  }
+  .questions__list {
+    margin: 39px 0 0 0;
+  }
+  .questions__item {
+    padding: 28px 105px 26px 0;
   }
   .questions__link {
     font-size: 20px;
@@ -674,27 +692,24 @@ ul {
     margin: 0;
   }
   .hero {
-    margin-left: -25px;
-    margin-right: -25px;
+    margin-left: -50px;
+    margin-right: -50px;
   }
   .hero__text {
-    padding: 188px 20px 120px 50px;
+    padding: 188px 20px 115px 50px;
   }
   .hero__h1 {
     line-height: 75px;
   }
   .hero__button {
-    margin-top: 114px;
-    padding: 30px 38px 25px;
-  }
-  .about, .how, .questions, .header-body {
-    padding: 0 25px;
+    margin-top: 110px;
+    padding: 28px 38px 25px;
   }
   .about {
-    margin-top: 53px;
+    margin-top: 61px;
   }
   .about__text {
-    margin-bottom: 55px;
+    margin-bottom: 59px;
     line-height: 32px;
   }
   .about__detail {
@@ -755,12 +770,13 @@ ul {
   }
   .questions h2 {
     letter-spacing: -1px;
+    word-spacing: -1px;
   }
   .questions__list {
     margin-top: 40px;
   }
   .questions__item {
-    padding: 19px 45px 16px 0;
+    padding: 19px 70px 16px 0;
   }
   .footer {
     margin-top: 57px;
@@ -771,14 +787,14 @@ ul {
     flex-direction: column;
   }
   .footer__nav-container {
-    margin: 60px 26px 20px;
+    margin: 60px 0 20px;
     order: 1;
   }
   .footer__nav-body {
     display: none;
   }
   .footer__form-container {
-    margin-left: 25px;
+    margin-left: 0;
   }
   .footer__social-media {
     padding: 0;
