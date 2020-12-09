@@ -80,6 +80,10 @@ ul {
   background: url(../img/icons/Burger.svg) no-repeat;
 }
 
+.burger:hover {
+  background: url(../img/icons/Burger_active.svg) no-repeat;
+}
+
 .logo__header, .logo__footer {
   margin: 15px 0 10px;
 }
@@ -114,16 +118,28 @@ ul {
   border: none;
 }
 
+.header__search-button:hover {
+  background: url(../img/icons/Search_orange.svg) no-repeat;
+}
+
 .hero__body {
   background: url("../img/hero-back.jpg") no-repeat;
   background-size: cover;
 }
 
 .nav-item a {
+  padding: 6px 0 6px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: #333333;
+  border-bottom: 2px solid #fff;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  border-bottom: 2px solid #FF9900;
+  transition: border-bottom-color 0.3s ease-in-out;
 }
 
 .hero__text {
@@ -463,6 +479,7 @@ ul {
 .footer__input, .footer__textarea {
   padding-left: 24px;
   width: 100%;
+  color: #ffffff;
   background: #414141;
   outline: none;
   border: none;
