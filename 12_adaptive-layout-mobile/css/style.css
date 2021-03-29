@@ -47,6 +47,10 @@ ul {
   padding: 0 50px;
 }
 
+.nobr {
+  white-space: nowrap;
+}
+
 .button_orange {
   transition: all 0.3s ease-in-out;
 }
@@ -811,7 +815,6 @@ ul {
   }
   .questions h2 {
     word-spacing: -1px;
-    letter-spacing: -1px;
   }
   .questions__list {
     margin-top: 40px;
@@ -1048,6 +1051,40 @@ ul {
   .questions {
     margin-top: 41px;
   }
+  .questions__list {
+    margin-top: 17px;
+  }
+  .questions__item {
+    padding: 16px 40px 17px 0;
+  }
+  .questions__link {
+    line-height: 24px;
+  }
+  .footer {
+    margin-top: 40px;
+  }
+  .footer-body {
+    padding-top: 28px;
+  }
+  .footer__input {
+    padding-left: 20px;
+  }
+  .form-bottom {
+    padding-top: 12px;
+  }
+  .submit_footer {
+    font-size: 12px;
+  }
+  .submit_footer {
+    margin-bottom: 17px;
+    padding: 16px 28px 13px;
+  }
+  .footer__checkbox+label {
+    margin-left: 10px;
+  }
+  .footer__checkbox+label::before {
+    margin-right: 3px;
+  }
 }
 @media (max-width: 360px) {
   .hero__text {
@@ -1062,6 +1099,19 @@ ul {
   }
   .about__mini-title:last-child {
     padding: 5px 5px 0 0;
+  }
+  .footer__nav-container {
+    margin: 20px 0 0;
+  }
+  .logo_footer img {
+    max-width: 133px;
+  }
+  .footer__sm-link {
+    width: 34px;
+    height: 34px;
+  }
+  .footer__social-media {
+    width: 132px;
   }
 }
 @media (min-width: 3000px) {
