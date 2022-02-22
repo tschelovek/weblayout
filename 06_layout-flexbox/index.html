@@ -39,14 +39,15 @@
             <a href="" class="nav__link">Блог</a>
           </li>
           <li class="nav__item">
-            <a href="" class="nav__link">Контакты</a>
+            <a href="#contacts" class="nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
       <form method="post" class="search-form">
         <input type="text" placeholder="Поиск" class="input search-form__input">
         <button class="search__btn">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               x="0px" y="0px"
                viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
 <g>
 	<g>
@@ -391,6 +392,56 @@
     </div>
   </section>
 
+  <div class="contacts-and-callback d-flex container" id="contacts">
+    <section class="contacts">
+      <h2>Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span class="contacts__item-name">Адрес</span>
+            <address class="text500dark-gray">Москва, улица Юности, дом 5 строение 4 офис 2</address>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__item-name">Телефоны</span>
+            <div class="contacts__item-body">
+              <a href="tel:+74995356434" class="footer-link link-gold">+7 (499) 535-64-34</a>
+              <a href="tel:+74950050544" class="footer-link link-gold">+7 (495) 005-05-44</a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__item-name">E-mail</span>
+            <div class="contacts__item-body">
+                <a href="mailto:lg.oona@mail.ru" class="link-gold">lg.oona@mail.ru</a>
+                <span class="contacts__email-text">по вопросам бронирования</span>
+                <a href="mailto:hotels.ln@mail.ru" class="link-gold">hotels.ln@mail.ru</a>
+                <span class="contacts__email-text">по вопросам сотрудничества</span>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__item-name">График</span>
+            <span class="text500dark-gray">Понедельник – пятница, с 10:00 до 19:00</span>
+          </li>
+          <li>
+            <a href="#" class="btn_white-gold btn_bigger">
+              Построить маршрут
+            </a>
+          </li>
+        </ul>
+    </section>
+    <section class="callback">
+      <h2 class="callback__title">Напишите нам</h2>
+      <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="post"
+            class="callback__form">
+        <input type="text" name="name" class="callback__item callback__item_input" placeholder="Имя">
+        <input type="tel" name="phone" class="callback__item callback__item_input" placeholder="+7">
+        <textarea type="text" name="text" rows="5" placeholder="Сообщение..."
+                  class="callback__item callback__item_textarea"></textarea>
+        <button type="submit" class="btn_gold">
+          Отправить
+        </button>
+      </form>
+    </section>
+  </div>
+
 </main>
 
 <footer class="footer">
@@ -414,7 +465,9 @@
       </div>
       <div class="footer-contacts d-flex">
         <ul class="footer-contacts__list">
-          <li class="footer-contacts__item">11710, улица Юности, дом 5 строение 4, офис 2</li>
+          <li class="footer-contacts__item">
+            <address>11710, улица Юности, дом 5 строение 4, офис 2</address>
+          </li>
           <li class="footer-contacts__item">
             <a href="tel:+74995356434" class="footer-link link-gold">+7 (499) 535-64-34</a>
             <a href="tel:+74950050544" class="footer-link link-gold">+7 (495) 005-05-44</a>

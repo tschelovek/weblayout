@@ -44,6 +44,10 @@ a {
     text-decoration: none;
 }
 
+address {
+  font-style: normal;
+}
+
 html {
     font-family: 'Muller', sans-serif;
 }
@@ -62,7 +66,11 @@ h2 {
 .input {
     outline: none;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
+}
+
+.input::placeholder {
+  color: #999999;
 }
 
 ul {
@@ -164,6 +172,7 @@ ul {
   width: 35px;
   height: 35px;
   border: none;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -205,6 +214,7 @@ ul {
     color: #ffffff;
     background-color: #cc9933;
     cursor: pointer;
+    border: none;
 }
 
 .availability {
@@ -259,7 +269,7 @@ ul {
 
     /* About */
 .about {
-    margin-top: 55px;
+    margin-top: 60px;
 }
 
 .about__text {
@@ -389,6 +399,10 @@ ul {
 }
 
     /* Placement */
+.placement {
+  margin-top:55px;
+}
+
 .placement__list {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -439,7 +453,7 @@ ul {
 .btn_white-gold {
   display: inline-block;
   padding: 12px 20px;
-  border: 2px solid #cc9933;
+  border: 1px solid #cc9933;
   border-radius: 12px;
   font-weight: 600;
   line-height: 1;
@@ -461,6 +475,84 @@ ul {
   font-size: 22px;
   font-weight: 500;
   background: url("../img/icons/arrow-white.svg") right no-repeat;
+}
+
+    /* Contacts*/
+.contacts-and-callback {
+  margin-top: 55px;
+}
+
+.contacts__list {
+  padding: 40px;
+  max-width: 475px;
+  line-height: 1.5;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.contacts__item {
+  display: flex;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.text500dark-gray {
+  font-weight: 500;
+  color: #333333;
+}
+
+.contacts__item-title {
+  display: inline-table;
+  width: 150px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.contacts__email-text {
+  color: #999999;
+}
+
+.btn_bigger {
+  margin-top: 45px;
+  padding: 25px 30px 26px;
+}
+
+    /* Callback*/
+.callback {
+  max-width: 675px;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+
+.callback__title {
+  margin-left: 0;
+}
+
+.callback__form {
+  display: inline-flex;
+  width: 340px;
+  flex-direction: column;
+}
+
+.callback__item {
+  margin-bottom: 25px;
+  padding: 0 20px 0;
+  line-height: 1.5;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+}
+
+.callback__item_input {
+  line-height: 4;
+}
+
+.callback__item_textarea {
+  padding-top: 1em;
+  line-height: 1.3;
 }
 
     /* Footer */
@@ -531,7 +623,7 @@ ul {
   background-image: url("../img/icons/social.svg");
 }
 
-.footer-medialinks_gplus {
+.footer-medialinks_g-plus {
   background-image: url("../img/icons/google-plus-social-logotype.svg");
 }
 
