@@ -6,6 +6,9 @@
   --dark-orange: #E1670E;
   --orange: #FF9900;
   --light-orange: #F7B045;
+  --gray: #999999;
+  --light-gray: #DCDCDC;
+;
 }
 
 /* Общие классы для разных элементов */
@@ -15,58 +18,46 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
 a {
   text-decoration: none;
 }
-
 address {
   font-style: normal;
 }
-
 img {
   max-width: 100%;
 }
-
 h2, h3, p, ul {
   margin: 0;
 }
-
 h2 {
   font-size: 48px;
   font-weight: 400;
   color: #333333;
 }
-
 input {
   outline: none;
   border: none;
 }
-
 ul {
   padding: 0;
   list-style: none;
 }
-
 .container {
   max-width: 1870px;
   margin: 0 auto;
   padding: 0 50px;
 }
-
 .nobr {
   white-space: nowrap;
 }
-
 .button_orange {
   transition: all 0.3s ease-in-out;
 }
-
 .button_orange:hover {
   opacity: 0.6;
   transition: opacity 0.3s ease-in-out;
 }
-
 .button_orange:active {
   background-color: #E1670E;
   opacity: 1;
@@ -79,8 +70,10 @@ ul {
 }
 
 .header-body {
+  position: relative;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 .burger {
@@ -91,11 +84,9 @@ ul {
   border: none;
   background: url(../img/icons/Burger.svg) no-repeat;
 }
-
 .burger:hover {
   background: url(../img/icons/Burger_active.svg) no-repeat;
 }
-
 .burger__btn {
   padding: 0;
   display: none;
@@ -109,7 +100,6 @@ ul {
   background-color: inherit;
   border: none;
 }
-
 .burger__btn span {
   display: block;
   width: 100%;
@@ -117,7 +107,6 @@ ul {
   background-color: #333333;
   transition: all 0.3s;
 }
-
 .burger__btn span::before, .burger__btn span::after {
   content: '';
   position: absolute;
@@ -128,23 +117,18 @@ ul {
   background-color: #333333;
   transition: all 0.3s;
 }
-
 .burger__btn span::before {
   top: 0;
 }
-
 .burger__btn span::after {
   bottom: 0;
 }
-
 .burger__btn.active span {
   width: 80%;
 }
-
 .burger__btn.active span::after {
   width: 60%;
 }
-
 .burger__btn.active span, .burger__btn.active span::before, .burger__btn.active span::after {
   background-color: var(--dark-orange);
 }
@@ -157,18 +141,15 @@ ul {
   display: flex;
   margin-left: auto;
 }
-
 .nav__list {
   display: flex;
   margin-right: 11px;
   padding-top: 6px;
   align-items: center;
 }
-
 .nav-item:not(:first-child) {
   margin-left: 82px;
 }
-
 .nav-item a {
   padding: 6px 0 6px;
   font-weight: 600;
@@ -178,12 +159,10 @@ ul {
   border-bottom: 2px solid #fff;
   transition: border-bottom-color 0.3s ease-in-out;
 }
-
 .nav-item a:hover {
   border-bottom: 2px solid #FF9900;
   transition: border-bottom-color 0.3s ease-in-out;
 }
-
 .nav-item a:active {
   color: #E1670E;
   border-bottom: 2px solid #E1670E;
@@ -191,10 +170,11 @@ ul {
 }
 
 .header__search-input {
-  display: none;
+  margin: 0 auto 0 8px;
+  height: 32px;
+  border-bottom: 1px solid var(--light-gray);
 }
-
-.header__search-button {
+.header__search-button, .header__search-close-button {
   margin: 6px 3px 0 67px;
   min-width: 40px;
   transform: translateY(2px);
@@ -204,38 +184,56 @@ ul {
   cursor: pointer;
   outline: none;
 }
-
-.header__search-button:hover svg{
+.header__search-close-button {
+  margin: 0;
+  min-width: unset;
+}
+.header__search-button:hover svg, .header__search-close-button:hover svg rect{
   fill: #FF9900;
 }
-
 .header__search-button:active svg{
   fill: #E1670E;
 }
-
-.header__search-button:hover {
-  /*background: url(../img/icons/Search_orange.svg) no-repeat;*/
+.search__fieldset {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  right: -110%;
+  top: 12px;
+  height: 60px;
+  max-width: 560px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px 4px var(--gray);
+  border: none;
+  border-radius: 16px;
+  transition: right 0.6s ease-in-out;
+}
+.search__fieldset.active {
+  z-index: 15;
+  right: 0;
+  height: 60px;
+  box-shadow: 0 0 8px 4px var(--gray);
+  border-radius: 16px;
 }
 
 .hero-wrapper {
   position: relative;
 }
-
 .hero__body_1 {
   background: url("../img/hero-back.jpg") no-repeat;
   background-size: cover;
 }
-
 .hero__body_2 {
   background: url("../img/hero2-back.jpg") no-repeat;
   background-size: cover;
 }
-
 .hero__body_3 {
   background: url("../img/hero3-back.jpg") no-repeat;
   background-size: cover;
 }
-
 .hero__text {
   /*padding: 103px 0 90px 80px;*/
   position: absolute;
@@ -252,7 +250,6 @@ ul {
   font-weight: 700;
   z-index: 20;
 }
-
 .hero__h1 {
   margin: 0 -4px 22px;
   font-size: 71px;
@@ -260,7 +257,6 @@ ul {
   line-height: 85px;
   color: #ffffff;
 }
-
 .hero__button {
   display: inline-block;
   margin-top: 100px;
@@ -274,7 +270,6 @@ ul {
 .about {
   margin-top: 105px;
 }
-
 .about__text {
   margin: 22px 0 43px;
   max-width: 1235px;
@@ -283,7 +278,6 @@ ul {
   line-height: 2;
   color: #333333;
 }
-
 .about__text-link {
   display: inline-block;
   width: 16px;
@@ -292,19 +286,16 @@ ul {
   background-size: contain;
   transform: translateY(2px);
 }
-
 .about__body {
   display: flex;
   align-items: stretch;
 }
-
 .about__detail {
   display: flex;
   width: calc(50% - 15px);
   background: url("../img/about-back.jpg") center no-repeat;
   background-size: cover;
 }
-
 .about__detail-text {
   display: flex;
   padding: 42px 67px 42px 55px;
@@ -315,7 +306,6 @@ ul {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.5);
 }
-
 .about__button {
   display: inline-block;
   margin-left: 65px;
@@ -328,45 +318,36 @@ ul {
   border: 3px solid #ff9900;
   transition: all 0.3s ease-in-out;
 }
-
 .about__button:hover {
   background: #ff9900;
   transition: background 0.3s ease-in-out;
 }
-
 .about__button:active {
   background: #E1670E;
   border: 3px solid #E1670E;
   transition: 0s;
 }
-
 .about__list, .how__info, .how__image-block {
   width: calc(50% - 15px);
 }
-
 .about__list {
   margin-left: 30px;
 }
-
 .about__item {
   padding: 70px 113px 66px 300px;
   border: 1px solid #cacaca;
 }
-
 .about__item p {
   margin-top: 5px;
   line-height: 2;
 }
-
 .about__mini-title {
   font-weight: 800;
   font-size: 22px;
 }
-
 .about__item:first-child {
   background: url("../img/icons/about1.svg") left 62px top 45% no-repeat;
 }
-
 .about__item:last-child {
   margin-top: 30px;
   background: url("../img/icons/about2.svg") left 61px top 37% no-repeat;
@@ -1150,13 +1131,16 @@ ul {
   .header-body {
     max-height: 45px;
   }
-  .nav {
-    display: none;
+  /*.nav form {*/
+  /*  display: none;*/
+  /*}*/
+  .nav__list {
+    top: 45px;
   }
-  .logo__header {
-    margin: 4px 1px 0;
-    order: 1;
-  }
+  /*.logo__header {*/
+  /*  margin: 4px 1px 0;*/
+  /*  order: 1;*/
+  /*}*/
   .logo__header img {
     max-height: 31px;
   }

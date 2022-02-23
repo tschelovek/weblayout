@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let tabBtns = document.querySelectorAll('.how__btn');
   let contentTabs = document.querySelectorAll('.tabs__content');
-  let menuBtn = document.querySelector('.burger_btn');
+  let menuBtn = document.getElementById('burger_btn');
+  let searchGroup = document.querySelector('.search__fieldset');
+  let searchOpenBtn = document.getElementById('search_open');
+  let searchCloseBtn = document.querySelector('.header__search-close-button');
   let menuNav = document.querySelector('.nav__list');
 
   tabBtns.forEach(function (btn) {
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.currentTarget.classList.contains('active')) {
       $(function () {
         $('.nav__list').show('fold').addClass('mobile-menu');
-        addOutClickListener()
+        // addOutClickListener()
       })
     } else {
       $(function () {
@@ -62,10 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // $(function closeNavMenu() {
-  //   $('.nav__list').hide('fold')
-  // })
+  searchOpenBtn.addEventListener('click', () => {
+    searchGroup.classList.add('active')
+  })
 
+  searchCloseBtn.addEventListener('click', () => {
+    searchGroup.classList.remove('active')
+  })
 
   function addOutClickListener() {
     $(document).mouseup(function (e) {
