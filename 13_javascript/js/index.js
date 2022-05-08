@@ -1,41 +1,10 @@
 "use strict"
 
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  }
-};
-
 document.addEventListener('DOMContentLoaded', function () {
 
   let tabBtns = document.querySelectorAll('.how__btn');
   let contentTabs = document.querySelectorAll('.tabs__content');
-  let menuBtn = document.getElementById('burger_btn');
-  let searchGroup = document.querySelector('.search__fieldset');
-  let searchOpenBtn = document.getElementById('search_open');
-  let searchCloseBtn = document.querySelector('.header__search-close-button');
-  let menuNav = document.querySelector('.nav__list');
+  let menuBtn = document.querySelector('#burger_btn');
 
   tabBtns.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
@@ -55,28 +24,38 @@ document.addEventListener('DOMContentLoaded', function () {
     event.currentTarget.classList.toggle('active');
     if (event.currentTarget.classList.contains('active')) {
       $(function () {
-        $('.nav__list').show('fold').addClass('mobile-menu');
+        $('.nav__list_mobile').show('fold').addClass('mobile-menu');
         // addOutClickListener()
       })
     } else {
       $(function () {
-        $('.nav__list').hide('fold')
+        $('.nav__list_mobile').hide('fold')
       })
     }
   });
 
-  searchOpenBtn.addEventListener('click', () => {
-    searchGroup.classList.add('active')
-  })
+  let searchOpenBtn = document.getElementById('search_open');
+  let searchCloseBtn = document.querySelector('.header__search-close-button');
+  let searchForm = document.getElementById('form_search');
 
+  searchOpenBtn.addEventListener('click', () => {
+    searchForm.classList.add('active')
+  })
   searchCloseBtn.addEventListener('click', () => {
-    searchGroup.classList.remove('active')
+    searchForm.classList.remove('active')
+  })
+  document.addEventListener('click', (e) => {
+    let target = e.target;
+    if (!target.closest('.form-container')) {
+      searchForm.classList.remove('active');
+      searchForm.querySelector('.header__search-input').value = '';
+    }
   })
 
   function addOutClickListener() {
     $(document).mouseup(function (e) {
       let container = $(".nav__list");
-      if (container.has(e.target).length === 0){
+      if (container.has(e.target).length === 0) {
         container.hide('fold');
       }
       $('.burger__btn').removeClass('active')
@@ -89,6 +68,24 @@ document.addEventListener('DOMContentLoaded', function () {
       active: false,
       collapsible: true,
     });
+  });
+
+  const swiperHero = new Swiper('.swiper-container_hero', {
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 2500,
+    },
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 30,
+      slideShadows: false,
+    },
+    pagination: {
+      el: '.swiper-bullet-pagination.hero__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
   });
 })
 

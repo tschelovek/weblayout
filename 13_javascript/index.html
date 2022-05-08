@@ -6,30 +6,32 @@
   <title>Евклид</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!--  <link rel="stylesheet" href="/resources/demos/style.css">-->
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script defer src="/13_javascript/js/index.js"></script>
+  <script defer src="./js/index.js"></script>
 </head>
 <body>
 
 <header class="header">
-  <div class="container">
-    <div class="header-body">
-      <button id="burger_btn" type="button" class="burger__btn"><span>Меню</span></button>
-      <a href="index.html" class="logo__header"><img src="img/icons/logo.png" alt="проектные системы Евклид"></a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav-item"><a href="#">О нас</a></li>
-          <li class="nav-item"><a href="#">Проекты</a></li>
-          <li class="nav-item"><a href="#">Этапы</a></li>
-          <li class="nav-item"><a href="#">Отзывы</a></li>
-          <li class="nav-item"><a href="#">Контакты</a></li>
-        </ul>
-        <form method="post" id="form_search">
+  <div class="header">
+    <div class="container">
+      <div class="header-body">
+        <button id="burger_btn" type="button" class="burger__btn" aria-label="Open menu"><span>Меню</span></button>
+        <a href="index.html" class="logo__header"><img src="img/icons/logo.png" alt="проектные системы Евклид"></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav-item"><a href="#">О нас</a></li>
+            <li class="nav-item"><a href="#">Проекты</a></li>
+            <li class="nav-item"><a href="#">Этапы</a></li>
+            <li class="nav-item"><a href="#">Отзывы</a></li>
+            <li class="nav-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="form-container">
           <button type="button" class="header__search-button" id="search_open">
             <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                  x="0px" y="0px" width="28px" height="28px"
@@ -40,7 +42,7 @@
                 c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/>
             </svg>
           </button>
-          <fieldset class="search__fieldset">
+          <form action="/" method="post" id="form_search">
             <input type="search" class="header__search-input" placeholder="Что будем искать?">
             <button type="submit" class="header__search-button" id="search_button">
               <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +61,21 @@
                 <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2"/>
               </svg>
             </button>
-          </fieldset>
-        </form>
-      </nav>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
+  <nav class="nav_mobile">
+    <ul class="nav__list nav__list_mobile">
+      <li class="nav-item"><a href="#">О нас</a></li>
+      <li class="nav-item"><a href="#">Проекты</a></li>
+      <li class="nav-item"><a href="#">Этапы</a></li>
+      <li class="nav-item"><a href="#">Отзывы</a></li>
+      <li class="nav-item"><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
 </header>
 
 <main class="main">
@@ -79,37 +91,17 @@
             <div class="swiper-slide hero__body_3"></div>
 
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-bullet-pagination hero__pagination"></div>
         </div>
-        <div class="hero__text">
+<!--        <div class="hero__text">-->
           <h1 class="hero__h1">Проектные решения любой сложности</h1>
           <p class="hero__p">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
             уделом
             проектантов</p>
           <a href="#" class="hero__button button_orange">Заказать расчёт</a>
-        </div>
+<!--        </div>-->
       </div>
     </div>
-
-    <script>
-      const swiperHero = new Swiper('.swiper-container_hero', {
-        loop: true,
-        speed: 800,
-        autoplay: {
-          delay: 2500,
-        },
-        effect: 'coverflow',
-        coverflowEffect: {
-          rotate: 30,
-          slideShadows: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
-
   </section>
 
   <section class="about">
