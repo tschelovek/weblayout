@@ -2,7 +2,7 @@
   "name": "13",
   "version": "1.0.0",
   "description": "",
-  "main": "./13_javascript/js/index.js",
+  "main": "accessability/js/index.js",
   "dependencies": {
     "dom7": "^3.0.0",
     "ssr-window": "^3.0.0",
