@@ -619,7 +619,7 @@ svg rect, svg path {
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
   color: var(--orange);
 }
-.ui-accordion-header.questions__link:focus a, .ui-accordion-header.questions__link:hover a {
+.ui-accordion-header.questions__link a:focus, .ui-accordion-header.questions__link:hover a {
   outline: none;
   color: var(--orange);
 }
@@ -634,7 +634,6 @@ svg rect, svg path {
   color: var(--orange);
   transition: color 0.3s ease-in-out;
   border-top: 1px solid var(--orange);
-  /*border-bottom: 1px solid var(--orange);*/
 }
 
 .questions__item:hover {
@@ -700,12 +699,16 @@ svg rect, svg path {
 }
 
 .footer__form-container {
+  margin-left: 11px;
   max-width: 570px;
   min-width: 540px;
 }
 
-.footer__form-container {
-  margin-left: 11px;
+.footer__form__label {
+  font-size: 0;
+  width: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .footer__nav-container li {
