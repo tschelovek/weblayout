@@ -1365,11 +1365,11 @@ svg rect, svg path {
     font-size: 14px;
   }
   .questions__link::after {
-    padding-top: 4px;
+    padding-top: 2px;
     content: url('../img/icons/plus_itself_mini.svg');
     align-items: center;
     width: 30px;
-    height: 26px;
+    height: 28px;
   }
   .ui-accordion-header.questions__link:hover::after {
     content: url('../img/icons/plus_white_small.svg');
